@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yesil"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-38dp">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="31dp"
+        android:text="HOBİLER"
+        android:textColor="#000000"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxProgramlama"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtYas" />
+
+    <CheckBox
+        android:id="@+id/checkBoxOyun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:text="Oyun"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkBoxSpor"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSpor" />
+
+    <CheckBox
+        android:id="@+id/checkBoxProgramlama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:text="Programlama"
+        app:layout_constraintBaseline_toBaselineOf="@+id/checkBoxSpor"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSpor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Spor"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/editTxtYas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Yaşınızı Giriniz"
+        android:inputType="textPersonName|numberSigned"
+        android:textColor="#000000"
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="@+id/editTxtSehir"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtSehir" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:text="Yaş:"
+        android:textColor="#000000"
+        android:textSize="19dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTxtYas"
+        app:layout_constraintEnd_toStartOf="@+id/editTxtYas" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="13dp"
+        android:text="Cinsiyet:"
+        android:textColor="#000000"
+        android:textSize="19dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTxtYas"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxProgramlama"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="73dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnKayit"
+        app:layout_constraintEnd_toEndOf="@+id/editTxtYas"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxProgramlama">
+
+        <RadioButton
+            android:id="@+id/radioBtnK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kadın"
+            android:textSize="17dp"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="587dp" />
+
+        <RadioButton
+            android:id="@+id/radioBtnE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Erkek"
+            android:textSize="17dp"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="587dp" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTxtAd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="54dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Adınızı Giriniz"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textSize="19dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="21dp"
+        android:text="Ad: "
+        android:textColor="#000000"
+        android:textSize="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTxtSoyad"
+        app:layout_constraintEnd_toStartOf="@+id/editTxtAd" />
+
+    <EditText
+        android:id="@+id/editTxtSoyad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="135dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Soyadınızı Giriniz"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textSize="19dp"
+        app:layout_constraintStart_toStartOf="@+id/editTxtAd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="1dp"
+        android:text="Soyad: "
+        android:textColor="#000000"
+        android:textSize="19dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTxtSoyad"
+        app:layout_constraintEnd_toStartOf="@+id/editTxtSoyad" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="16dp"
+        android:text="KAYIT OL"
+        android:textColor="#000000"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editTxtAd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editTxtSehir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Şehrinizi Giriniz"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textSize="19dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/editTxtSoyad" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="16dp"
+        android:text="Şehir:"
+        android:textColor="#000000"
+        android:textSize="19dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTxtSehir"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btnKayit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="18dp"
+        android:background="#ffffff"
+        android:text="Kayıt Ol"
+        android:textColor="#ffffff"
+        android:textSize="19dp"
+        android:onClick="btnKayitOl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
